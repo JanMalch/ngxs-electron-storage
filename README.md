@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/ngxs-electron-storage.svg)](https://badge.fury.io/js/ngxs-electron-storage)
+
 # ngxs-electron-storage
 
 This [@NGXS](https://github.com/ngxs/store) storage plugin helps you to persist your store data in files.
