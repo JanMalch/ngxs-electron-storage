@@ -11,7 +11,7 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-guru/electron-builder:build",
           "options": {
             "outputPath": "dist/NgxsElectronStoragePluginApp",
             "index": "src/index.html",
@@ -48,7 +48,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-guru/electron-builder:dev-server",
           "options": {
             "browserTarget": "NgxsElectronStoragePluginApp:build"
           },
@@ -115,6 +115,46 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ngxs-electron-storage": {
+      "root": "projects/ngxs-electron-storage",
+      "sourceRoot": "projects/ngxs-electron-storage/src",
+      "projectType": "library",
+      "prefix": "ngxsel",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngxs-electron-storage/tsconfig.lib.json",
+            "project": "projects/ngxs-electron-storage/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ngxs-electron-storage/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngxs-electron-storage/src/test.ts",
+            "tsConfig": "projects/ngxs-electron-storage/tsconfig.spec.json",
+            "karmaConfig": "projects/ngxs-electron-storage/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngxs-electron-storage/tsconfig.lib.json",
+              "projects/ngxs-electron-storage/tsconfig.spec.json"
+            ],
             "exclude": [
               "**/node_modules/**"
             ]

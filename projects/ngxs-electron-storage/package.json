@@ -1,0 +1,24 @@
+{
+  "name": "ngxs-electron-storage",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
+    "electron": "^2.0.0"
+  },
+  "description": "NGXS storage plugin for Electron, that helps you to persist your store data in files.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JanMalch/ngx-electron-storage.git"
+  },
+  "keywords": [
+    "Angular",
+    "TypeScript",
+    "Electron"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JanMalch/ngx-electron-storage/issues"
+  },
+  "homepage": "https://github.com/JanMalch/ngx-electron-storage/"
+}

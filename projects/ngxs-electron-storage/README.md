@@ -63,7 +63,3 @@ You can inject a `ElectronStorageService` in your components to have access to t
 
 Each store object exposes a `persistNotifications$` observable, which emits notifications with the store name and the serialized state.
 The service itself also exposes a `persistNotifications$` observable, which combines all notifications of all stores.
-
-## demo
-
-Clone this repository and run `npm install && npm run lib-ea`.
